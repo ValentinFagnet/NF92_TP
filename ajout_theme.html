@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="resources/style.css" type="text/css">
+    <meta charset="utf-8">
+  </head>
+  <body>
+
+    <!-- Titre de niveau 1 -->
+    <h1> Ajout d'un thème </h1>
+    <hr>
+
+    <!-- Paragraphe explicatif -->
+    <p class="texte">
+      Ce formulaire vous permet d'ajouter un nouveau thème pour les futures séances de code. Il suffit d'entrer le nom du nouveau thème ainsi qu'une description de ce thème.
+      <br>
+      Attention, le nom du thème et son descriptif ne doivent pas contenir de chiffres ou d'apostrophes/guillemets.
+    </p>
+
+    <!-- Formulaire d'ajout d'un thème -->
+    <div class="formula">
+      <form method="POST" action="ajouter_theme.php">
+
+        <!-- Ajout d'un champ de type "text" et un champ de type "textarea" -->
+        Nom du thème :
+        <br>
+        <input type="text" name="theme" required>
+        <br>
+        Descriptif du thème :
+        <br>
+        <textarea name="desc" rows="10" cols="40" maxlength="300" required></textarea>
+        <br>
+
+        <!-- Ajout de 2 boutons : un permettant d'envoyer le formulaire, l'autre permettant de réinitialiser les champs -->
+        <input type="submit" value="Ajouter le thème">
+        <input type="reset" value="Recommencer">
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="resources/style.css" type="text/css">
+    <meta charset="utf-8">
+  </head>
+  <body>
+
+    <!-- Titre de niveau 1 -->
+    <h1> Ajout d'un élève </h1>
+    <hr>
+
+    <!-- Paragraphe explicatif -->
+    <p class="texte">
+      Ce formulaire vous permet d'inscrire un nouvel élève dans votre auto-école.
+      Il vous suffit d'entrer son nom, son prénom et sa date de naissance.
+    </p>
+
+    <br>
+
+    <!-- Paragraphe explicatif -->
+    <p class="texte">
+      Pour le nom et le prénom, vous ne pouvez utiliser ni chiffres, ni caractères spéciaux (les lettres accentuées sont autorisées).
+    </p>
+
+    <!-- Formulaire d'ajout d'un élève -->
+    <div class="formula">
+      <form method="POST" action="valider_eleve.php">
+
+        <!-- Ajout de 2 champs de type "text" et un champ de type "date" + sécurité côté client pour vérifier que le nom, prénom et date de naissance sont renseignés -->
+        Prénom de l'élève : <br> <input type="text" name="prenom" maxlength="20" required>
+        <br>
+        Nom de l'élève : <br> <input type="text" name="nom" maxlength="20" required>
+        <br>
+        Date de naissance de l'élève : <br> <input type="date" name="naissance" required>
+        <br>
+
+        <!-- Ajout de 2 boutons : un permettant d'envoyer le formulaire, l'autre permettant de réinitialiser les champs -->
+        <input type="submit" value="Ajouter l'élève">
+        <input type="reset" value="Recommencer">
+      </form>
+    </div>
+  </body>
+</html>
